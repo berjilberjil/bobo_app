@@ -1,5 +1,7 @@
+import 'package:bobo/modules/auth/view/otp_view.dart';
 import 'package:bobo/widgets/logo_text.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:intl_phone_field/intl_phone_field.dart';
 
 class LoginPage extends StatefulWidget {
@@ -97,6 +99,7 @@ class _LoginPageState extends State<LoginPage> {
 
                 SizedBox(height: screenWidth * 0.02),
 
+                
                 Padding(
                   padding: EdgeInsets.symmetric(horizontal: screenWidth * 0.1),
                   child: SizedBox(
@@ -106,7 +109,9 @@ class _LoginPageState extends State<LoginPage> {
                             ? 48
                             : 40, 
                     child: ElevatedButton(
-                      onPressed: isPhoneValid ? () {} : null,
+                      onPressed: isPhoneValid ? () {
+                        Get.to(() => OtpScreen());
+                        } : null,
 
                       style: ElevatedButton.styleFrom(
                         disabledBackgroundColor: Colors.grey,
@@ -123,6 +128,7 @@ class _LoginPageState extends State<LoginPage> {
                           fontFamily: 'Poppins',
                         ),
                       ),
+                      
                     ),
                   ),
                 ),
