@@ -1,4 +1,4 @@
-import 'package:bobo/modules/auth/view/new.dart';
+import 'package:bobo/modules/auth/view/home_view.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get/get.dart';
@@ -163,7 +163,7 @@ class _OtpScreenState extends State<OtpScreen> {
                 onPressed:
                     isOTPValid
                         ? () {
-                          Get.to(() => NewPage());
+                          Get.to(() => HomeView());
                         }
                         : null,
 
