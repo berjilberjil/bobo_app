@@ -26,7 +26,7 @@ class CustomSearchBar extends StatelessWidget {
                     opacity: 0.2,
                     child: Icon(Icons.search, color: Colors.white),
                   ),
-                  hintText: 'Search for something',
+                  hintText: "Search for something here!...",
                   hintStyle: TextStyle(
                     fontSize: screenWidth * 0.03,
                     color: Colors.white.withOpacity(0.2),

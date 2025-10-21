@@ -1,4 +1,5 @@
-import 'package:bobo/widgets/logo_text.dart';
+import 'dart:ui';
+import 'package:BookIn/widgets/logo_text.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -15,7 +16,6 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       home: HomePage(),
       theme: ThemeData(fontFamily: 'Poppins'),
-      
     );
   }
 }
@@ -27,10 +27,7 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: const Color(0xFF371ba6),
-      body: Center(
-        child: LogoText(),
-    
-      ),
+      body: Center(child: LogoText()),
     );
   }
 }

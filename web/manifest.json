@@ -1,6 +1,6 @@
 {
-    "name": "bobo",
-    "short_name": "bobo",
+    "name": "BookIn",
+    "short_name": "BookIn",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",

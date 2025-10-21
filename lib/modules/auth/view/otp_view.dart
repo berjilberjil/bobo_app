@@ -1,8 +1,7 @@
-import 'package:bobo/modules/auth/view/home_view.dart';
+import 'package:BookIn/modules/auth/view/home_view.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get/get.dart';
-import 'package:get/get_core/src/get_main.dart';
 import 'package:pin_code_fields/pin_code_fields.dart';
 
 class OtpScreen extends StatefulWidget {
@@ -18,7 +17,6 @@ class _OtpScreenState extends State<OtpScreen> {
   Widget build(BuildContext context) {
     double screenWidth = MediaQuery.of(context).size.width;
     return Scaffold(
-      
       backgroundColor: const Color(0xFF131315),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.start,
@@ -62,7 +60,7 @@ class _OtpScreenState extends State<OtpScreen> {
                   pinTheme: PinTheme(
                     shape: PinCodeFieldShape.box,
                     borderRadius: BorderRadius.circular(8),
-                    fieldHeight: 35,
+                    fieldHeight: 40,
                     fieldWidth: 45,
                     activeFillColor: Color(0xFF1e1e20), // adjust for dark mode
                     inactiveFillColor: Color(0xFF1e1e20),

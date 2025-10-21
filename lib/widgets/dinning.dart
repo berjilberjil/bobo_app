@@ -12,7 +12,7 @@ class _DinningState extends State<Dinning> {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        Text("Dining bitch",
+        Text("x bitch",
           style: TextStyle(
             color: Colors.white,
             fontSize: 24,

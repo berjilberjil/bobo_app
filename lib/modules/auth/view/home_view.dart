@@ -1,11 +1,9 @@
-import 'package:bobo/modules/auth/view/login_view.dart';
-import 'package:bobo/widgets/dinning.dart';
-import 'package:bobo/widgets/events.dart';
-import 'package:bobo/widgets/for_you.dart';
-import 'package:bobo/widgets/movies.dart';
-import 'package:bobo/widgets/search_bar.dart';
+import 'package:BookIn/widgets/dinning.dart';
+import 'package:BookIn/widgets/events.dart';
+import 'package:BookIn/widgets/for_you.dart';
+import 'package:BookIn/widgets/movies.dart';
+import 'package:BookIn/widgets/search_bar.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 
 class HomeView extends StatefulWidget {
   const HomeView({super.key});
@@ -30,12 +28,13 @@ class _NewPageState extends State<HomeView> {
     double screenWidth = MediaQuery.of(context).size.width;
 
     return Scaffold(
-      backgroundColor: const Color(0xFF131315).withOpacity(0.9),
+      backgroundColor: const Color(0xFF1E1E1E).withOpacity(0.9),
       body: SafeArea(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
             const CustomSearchBar(),
+            SizedBox(height: screenWidth * 0.03),
 
             SizedBox(
               height: 48,
@@ -56,14 +55,19 @@ class _NewPageState extends State<HomeView> {
                             children: [
                               Icon(
                                 icons[index],
-                                color: isSelected ? Colors.white : Colors.grey,
+                                color:
+                                    isSelected
+                                        ? Color(0xFF675BA6)
+                                        : Colors.grey,
                               ),
                               Text(
                                 tabs[index],
 
                                 style: TextStyle(
                                   color:
-                                      isSelected ? Colors.white : Colors.grey,
+                                      isSelected
+                                          ? Color(0xFF675BA6)
+                                          : Colors.grey,
                                   fontWeight:
                                       isSelected
                                           ? FontWeight.bold
@@ -79,7 +83,7 @@ class _NewPageState extends State<HomeView> {
                               height: 3,
                               width: 30,
                               decoration: BoxDecoration(
-                                color: Colors.white,
+                                color: const Color(0xFF371ba6),
                                 borderRadius: BorderRadius.circular(2),
                               ),
                             ),
@@ -90,6 +94,7 @@ class _NewPageState extends State<HomeView> {
                 }),
               ),
             ),
+            SizedBox(height: screenWidth * 0.05),
 
             // 👇 Dynamic Content (based on tab)
             Expanded(child: content[selectedIndex]),
